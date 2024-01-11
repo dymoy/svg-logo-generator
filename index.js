@@ -24,7 +24,11 @@ const questions = [
  * @returns {Boolean} - Returns false if over 3 characters. 
  */
 function validateText(answer) {
-    return answer.length <= 3;
+    if (answer.length > 3) {
+        console.log('\x1B[31m Please enter only up to 3 characters. \x1B[31');
+        return false;
+    }
+    return true;
 }
 
 /* Create a function to initialize app */
