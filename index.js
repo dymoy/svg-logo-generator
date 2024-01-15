@@ -5,11 +5,11 @@ const { isValidColorName, isValidRGB } = require('is-valid-css-color');
 const generateSVG = require('./lib/generateSVG');
 
 /** 
- * Create an array of questions for user input including the following sections:
- * Text (up to 3 characters), 
- * Text color (color keyword or hex),
- * Shape (list - circle, triangle, or square),
- * Shape color (color keyword or hex)
+ * Create an array of questions for inquirer including the following keys:
+ *  text - inquire using input and validate text length.
+ *  textColor - inquire using input and validate color.
+ *  shape - inquire using list with the choices [Circle, Triangle, Square].
+ *  shapeColor - inquire using input and validate color.
  */ 
 const questions = [
     // {
@@ -44,9 +44,9 @@ const questions = [
 ];
 
 /**
- * Uses the CSS.supports() method to verify if the browser supports a given CSS feature, or not
- * @param {JSON} answer - The provided color keyword or hexadecimal provided by the user 
- * @returns {Boolean} - Returns true if color keyword or hex value is supported by CSS.
+ * Uses the is-valid-css-color npm package to verify if the given color keyword or hexidecimal number is valid. 
+ * @param {String} answer - The provided color keyword or hexadecimal provided by the user.
+ * @returns {Boolean} - Returns true if color keyword or hex value is supported. Returns false if the provided String is an invalid color. 
  */
 function validateColor(answer) {    
     var isValid = false;
@@ -67,7 +67,7 @@ function validateColor(answer) {
 
 /**
  * Validate that the text entered is 3 characters or fewer.
- * @param {String} answer - Text entered by the user 
+ * @param {String} answer - Text entered by the user.
  * @returns {Boolean} - Returns false if over 3 characters. 
  */
 function validateText(answer) {
@@ -97,7 +97,7 @@ function init() {
     // Prompt the user with the questions and then write data into 'README.md'
     inquirer.prompt(questions)
     .then((data) => {
-        console.log(data);
+        // console.log(data);
         // Call the writeToFile function to write the content into the output file
         const fileName = 'logo.svg';
         const content = generateSVG(data);
