@@ -14,4 +14,3 @@ describe('Shape', () => {
         expect(shape.shapeColor).toEqual("orange");
     });
 });
-

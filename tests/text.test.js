@@ -12,4 +12,3 @@ describe('Text', () => {
         expect(text.render()).toEqual(`<text x="150" y="170" font-size="60" text-anchor="middle" fill="orange">EX2</text>`);
     });
 });
-
