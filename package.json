@@ -1,14 +1,16 @@
 {
   "name": "svg-logo-generator",
   "version": "1.0.0",
-  "description": "## Your Task",
+  "description": "A SVG logo generator that takes user-input for the desired shape, text, and color of the logo.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "jest": "^29.7.0"
   }
 }
