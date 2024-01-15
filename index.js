@@ -51,18 +51,20 @@ const questions = [
 function validateColor(answer) {    
     var isValid = false;
 
+    // Checks if user entered a hexidecimal number denoted by '#'
     if (answer[0] === '#') {
         isValid = isValidRGB(answer);
     } else {
         isValid = isValidColorName(answer);
     }
 
-    if (isValid) {
-        return true;
-    } else {
+    // If the color entered is not valid, return an error message to the console. 
+    if (!isValid) {
         console.log('\x1B[31m Please enter a valid color keyword or hexidecimal number. \x1B[31');
         return false;
-    }
+    } 
+
+    return true;
 }
 
 /**
@@ -94,10 +96,9 @@ function writeToFile(fileName, content) {
 function init() {
     console.log("Welcome to the SVG Logo Generator! Let's get started. Please answer the following prompts.");
     
-    // Prompt the user with the questions and then write data into 'README.md'
+    // Prompt the user with the questions and then write data to 'logo.svg'
     inquirer.prompt(questions)
     .then((data) => {
-        // console.log(data);
         // Call the writeToFile function to write the content into the output file
         const fileName = 'logo.svg';
         const content = generateSVG(data);
