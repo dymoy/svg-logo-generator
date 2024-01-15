@@ -12,18 +12,18 @@ const generateSVG = require('./lib/generateSVG');
  *  shapeColor - inquire using input and validate color.
  */ 
 const questions = [
-    // {
-    //     type: 'input',
-    //     name: 'text',
-    //     message: 'What text would you like in your logo? Please enter up to 3 characters. ',
-    //     validate: validateText
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'textColor',
-    //     message: 'What color would you like your text? Please enter a color keyword or a hexadeimal number. ',
-    //     validate: validateColor
-    // }, 
+    {
+        type: 'input',
+        name: 'text',
+        message: 'What text would you like in your logo? Please enter up to 3 characters. ',
+        validate: validateText
+    },
+    {
+        type: 'input',
+        name: 'textColor',
+        message: 'What color would you like your text? Please enter a color keyword or a hexadeimal number. ',
+        validate: validateColor
+    }, 
     {
         type: 'list',
         name: 'shape',

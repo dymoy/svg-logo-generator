@@ -1,4 +1,4 @@
-const Shape = require('../lib/shape.js')
+const Shape = require('../lib/shape.js');
 
 describe('Shape', () => {
     test('should create a Shape with an empty string as the shapeColor', () => {
@@ -12,6 +12,6 @@ describe('Shape', () => {
         const shape = new Shape();
         shape.setColor("orange");
         expect(shape.shapeColor).toEqual("orange");
-    })
-})
+    });
+});
 
