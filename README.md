@@ -14,7 +14,7 @@ When creating a website or application, you may need a logo to represent your pr
 - [Questions](#questions)
 
 ## Walkthrough Video 
-Click the following link to view a walktrhough video on the usage of the application: [SVG Logo Generator Video]()  
+Click the following link to view a walktrhough video on the usage of the application: [SVG Logo Generator Video](https://drive.google.com/file/d/13JhJsfkH9xm004z9TQHjxntQE2g7D15-/view)  
 
 ## Installation 
 1. Clone this repository to your local machine. (For reference, visit the [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) GitHub Docs article.)
